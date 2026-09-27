@@ -1,3 +1,7 @@
 torch
 numpy
+pandas
+caveclient
+onnx
+onnxruntime
 ursina
