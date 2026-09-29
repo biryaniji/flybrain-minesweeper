@@ -1,0 +1,28 @@
+{
+  "checkpoint": "minesweeper_cnn_old.pt",
+  "arch": "cnn",
+  "board": "4x4, 2 mines",
+  "safe_first_click": false,
+  "agent_greedy": {
+    "games": 2000,
+    "wins": 938,
+    "win_rate": 0.469,
+    "win_rate_ci95": [
+      0.4472,
+      0.4909
+    ],
+    "avg_clicks": 3.85,
+    "avg_clicks_in_wins": 4.17
+  },
+  "random_baseline": {
+    "games": 2000,
+    "wins": 362,
+    "win_rate": 0.181,
+    "win_rate_ci95": [
+      0.1647,
+      0.1985
+    ],
+    "avg_clicks": 3.42,
+    "avg_clicks_in_wins": 3.31
+  }
+}

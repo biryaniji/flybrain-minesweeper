@@ -1,0 +1,28 @@
+{
+  "checkpoint": "agent_fly_connectome.pt",
+  "arch": "fly",
+  "board": "4x4, 2 mines",
+  "safe_first_click": true,
+  "agent_greedy": {
+    "games": 2000,
+    "wins": 1192,
+    "win_rate": 0.596,
+    "win_rate_ci95": [
+      0.5743,
+      0.6173
+    ],
+    "avg_clicks": 3.9,
+    "avg_clicks_in_wins": 3.98
+  },
+  "random_baseline": {
+    "games": 2000,
+    "wins": 404,
+    "win_rate": 0.202,
+    "win_rate_ci95": [
+      0.185,
+      0.2202
+    ],
+    "avg_clicks": 3.65,
+    "avg_clicks_in_wins": 3.36
+  }
+}

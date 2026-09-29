@@ -1,0 +1,28 @@
+{
+  "checkpoint": "agent_fly_shuffled.pt",
+  "arch": "fly",
+  "board": "4x4, 2 mines",
+  "safe_first_click": true,
+  "agent_greedy": {
+    "games": 2000,
+    "wins": 1169,
+    "win_rate": 0.5845,
+    "win_rate_ci95": [
+      0.5628,
+      0.6059
+    ],
+    "avg_clicks": 3.96,
+    "avg_clicks_in_wins": 3.99
+  },
+  "random_baseline": {
+    "games": 2000,
+    "wins": 404,
+    "win_rate": 0.202,
+    "win_rate_ci95": [
+      0.185,
+      0.2202
+    ],
+    "avg_clicks": 3.65,
+    "avg_clicks_in_wins": 3.36
+  }
+}

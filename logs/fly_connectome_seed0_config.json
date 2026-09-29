@@ -1,0 +1,22 @@
+{
+  "arch": "fly",
+  "init": "connectome",
+  "connectome": "fly_connectome.pt",
+  "freeze": false,
+  "size": 4,
+  "mines": 2,
+  "seed": 0,
+  "total_steps": 500000,
+  "rollout_steps": 1024,
+  "update_epochs": 4,
+  "minibatch_size": 128,
+  "lr": 0.0003,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip": 0.2,
+  "ent_coef": 0.01,
+  "vf_coef": 0.5,
+  "max_grad_norm": 0.5,
+  "target_kl": 0.03,
+  "out": null
+}

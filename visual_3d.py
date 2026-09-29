@@ -6,31 +6,13 @@ import os
 import sys
 import math
 from environment import MinesweeperEnv
+from brain import MineSweeperCNN
 from ursina import *
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 WEIGHTS_PATH = os.path.join(SCRIPT_DIR, 'minesweeper_cnn.pt')
 
-class MineSweeperCNN(nn.Module):
-    def __init__(self, grid_size=4):
-        super(MineSweeperCNN, self).__init__()
-        self.grid_size = grid_size
-        self.conv1 = nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
-        self.actor_fc = nn.Linear(64 * grid_size * grid_size, grid_size * grid_size)
-        self.critic_fc = nn.Linear(64 * grid_size * grid_size, 1)
 
-    def forward(self, x):
-        if x.dim() == 2:
-            x = x.unsqueeze(0).unsqueeze(0)
-        elif x.dim() == 3:
-            x = x.unsqueeze(1)
-        x = F.relu(self.conv1(x))
-        x = F.relu(self.conv2(x))
-        x = x.reshape(x.size(0), -1)
-        action_logits = self.actor_fc(x)
-        state_value = self.critic_fc(x)
-        return action_logits, state_value
 
 app = Ursina()
 window.title = "Agentic Fly Playthrough"
